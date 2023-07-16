@@ -9,5 +9,4 @@ var maxProfit = function (prices) {
       maxPrice = prices[i]-buyPrice
     }
   }
-  return maxPrice
 }
