@@ -1,4 +1,13 @@
-var search = function (nums, target) {
-  return nums;
+var numIdenticalPairs = function (nums) {
+  let goodPairs = 0;
+  for (let i = 0; i < nums.length; i++){
+    for (let j = 0; j < nums.length; j++){
+      if ((nums[i] === nums[j]) && (i < j)) {
+        goodPairs++;
+      }
+    }
+  }
+  return goodPairs;
 };
-console.log(search([-1, 0, 3, 5, 9, 12], 9));
+
+console.log(numIdenticalPairs([1,1,1,1]))
