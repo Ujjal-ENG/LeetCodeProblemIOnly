@@ -1,12 +1,12 @@
-var maxProfit = function (prices) {
-  let buyPrice = Infinity;
-  let maxPrice = 0;
-  for (let i = 0; i < prices.length; i++) { 
-    if (prices[i] < buyPrice) {
-      buyPrice = prices[i]
-    }
-    else if (prices[i] - buyPrice > maxPrice) {
-      maxPrice = prices[i]-buyPrice
-    }
+function canPay(arrs,price) {
+  let sum = 0;
+  for (let i = 0; i < arrs.length; i++){
+    sum += arrs[i]
   }
+  if (sum >= price) {
+    return true
+  }
+  return false
 }
+
+console.log(canPay([1,5,5],10))
